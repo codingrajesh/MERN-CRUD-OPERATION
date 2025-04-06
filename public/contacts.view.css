@@ -1,0 +1,180 @@
+body{
+    background: linear-gradient(to right, #2980b9, #2c3e50);
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #2980b9, #2c3e50);
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.contact-details{
+   max-width: fit-content;
+   min-width: max-content;
+   max-height: fit-content;
+    min-height: max-content;
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: 500;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+   
+}
+.container h1{
+    font-size: calc(2rem + 0.5vw);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.contact-details  button{
+    text-transform: capitalize;
+    border-radius: 20px;
+    transition: all 0.3s ease 0s;   
+    font-weight: 500;
+    background-color:#19AADF ;
+    color: #fff;
+    border-radius: inherit;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+.contact-details button:hover{
+    background-color:  #00bbff;
+    color:black;
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease 0s;   
+}
+
+/* Tablet Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .contact-details {
+        width: 90%;
+        font-size: calc(1.2rem + 0.5vw);
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: calc(1.5rem + 0.5vw);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Large Devices (576px and below) */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .contact-details {
+        width: 100%;
+        min-width: auto;
+        font-size: calc(1rem + 0.5vw);
+        padding: 12px;
+    }
+
+    .container h1 {
+        font-size: calc(1.3rem + 0.5vw);
+        margin-bottom: 15px;
+    }
+
+    .contact-details button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Small Devices (375px and below) */
+@media screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .contact-details {
+        padding: 10px;
+        font-size: calc(0.9rem + 0.5vw);
+        margin: 10px;
+    }
+
+    .container h1 {
+        font-size: calc(1.1rem + 0.5vw);
+        padding: 0 5px;
+    }
+
+    .contact-details button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Handle landscape orientation */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .container {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .contact-details {
+        margin: 10px auto;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .contact-details {
+        box-shadow: 0 0 0 2.5px rgba(0,0,0,0.05),
+                    0 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .contact-details button:hover {
+        box-shadow: 0 0 0 2.5px rgba(0,0,0,0.05),
+                    0 0 0 5px rgba(0,0,0,0.05);
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .contact-details {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .contact-details button {
+        background-color: #1590bf;
+    }
+
+    .contact-details button:hover {
+        background-color: #00a6e6;
+    }
+}

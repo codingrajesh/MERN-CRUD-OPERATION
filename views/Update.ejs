@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/contacts.update.css">
+    <!-- CDN Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Form to submit the data -->
+    <form action="/updateContact/<%= contact._id%>" method="post">
+        <div class="container mt-2 mb-5 d-flex justify-content-center">
+            <div class="card px-1 py-4 mt-3">
+                <div class="card-body">
+                    <!-- <h6 class="card-title mb-3">This appointment is for</h6> -->
+                    <div class="d-flex flex-row">
+                        <label class="radio mr-1 text-center"><a href="/"><input type="radio" name="add" value="anz">
+                                <span> <i class="fa fa-user"></i> All Contacts </span></a></label>
+                    </div>
+                    <h6 class="information mt-4 text-white">Please Update the following information about Contact</h6>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <!-- <label for="name">Name</label> --> <input class="form-control text-white"
+                                    type="text" name="name" placeholder="Name" required value="<%= contact.name %>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> <input class="form-control text-white" type="text"
+                                        name="phone" placeholder="Mobile" required value="<%= contact.phone %>"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> <input class="form-control text-white" type="email"
+                                        name="email" placeholder="Email ID" required value="<%= contact.email %>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> <input class="form-control text-white" type="text" name="city"
+                                        placeholder="City" required value="<%= contact.city %>"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class=" d-flex flex-column text-center px-5 mt-3 mb-3">
+                        <small class="agree-text">By Booking this appointment you agree to the</small>
+                        <a href="#" class="terms">Terms & Conditions</a>
+                    </div> -->
+                    <button class="button btn-block confirm-button my-4">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
