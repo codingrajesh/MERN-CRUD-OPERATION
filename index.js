@@ -5,7 +5,7 @@ import route from "./routes/contacts.routes.js";
 
 const PORT = process.env.PORT || 4000;
 // Database connection
-connectDB();
+await connectDB();
 
 //middleware
 app.set('view engine','ejs');
